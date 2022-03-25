@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import type { App } from 'vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,4 +14,6 @@ const router = createRouter({
   routes,
 })
 
-export default router
+export const setupVueRouter = (app: App) => {
+  app.use(router)
+}

@@ -4,12 +4,12 @@
   <button @click="updateName">修改store中的name</button>
   <hr />
 
-  <n-button>naive-ui</n-button>
+  <n-button @click="getUserInfo">naive-ui</n-button>
 </template>
 
 <script setup lang="ts">
-import { useMainStore } from '@/store/mian'
-import { NButton } from 'naive-ui'
+import { useMainStore } from '@/store/main'
+import { getUserInfo } from '@/apis/User'
 
 const mainStore = useMainStore()
 
